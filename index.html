@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Toluhi | Personal Website</title>
+    <meta
+      name="description"
+      content="A modern personal website built with HTML, CSS, and JavaScript."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-shell">
+          <a class="logo" href="#">Peter Toluhi</a>
+          <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Building thoughtful digital experiences</p>
+        <h1> <span>Peter Toluhi</span></h1>
+        <p class="hero-text">
+          I’m a creative developer who loves turning ideas into calm, useful,
+          and beautifully crafted websites.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary" href="#contact">Let’s Talk</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Designing with clarity and purpose.</h2>
+        </div>
+        <div class="about-grid reveal">
+          <p>
+            I enjoy building websites that feel welcoming, perform well, and make
+            it easy for people to connect with your work. Whether it’s a personal
+            brand, a portfolio, or a modern landing page, I focus on clean code
+            and memorable user experiences.
+          </p>
+          <ul class="highlights">
+            <li>Responsive layouts</li>
+            <li>Modern styling</li>
+            <li>Accessible interfaces</li>
+            <li>Small, polished interactions</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Featured work that feels clear, modern, and intentional.</h2>
+        </div>
+        <div class="project-showcase reveal">
+          <article class="project-card">
+            <div class="project-badge">Brand Site</div>
+            <h3>Quietstorm Studio</h3>
+            <p>A calm, conversion-focused website designed to introduce a creative services brand with confidence.</p>
+            <ul>
+              <li>Custom layout and messaging</li>
+              <li>Clean, responsive visuals</li>
+              <li>Strong calls to action</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <div class="project-badge">Portfolio</div>
+            <h3>Creator Portfolio</h3>
+            <p>An elegant portfolio experience that highlights projects, process, and personality in a simple flow.</p>
+            <ul>
+              <li>Story-driven sections</li>
+              <li>Easy navigation</li>
+              <li>Fast, lightweight experience</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <div class="project-badge">Launch Page</div>
+            <h3>Launch Campaign Page</h3>
+            <p>A high-impact landing page crafted to make a first impression and drive signups or enquiries.</p>
+            <ul>
+              <li>Bold visuals and hierarchy</li>
+              <li>Conversion-focused structure</li>
+              <li>Polished, modern interactions</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <div class="project-badge">Portfolio</div>
+            <h3>Ogechi Portfolio</h3>
+            <p>A polished personal portfolio website designed to showcase professional work, projects, and personality with clarity.</p>
+            <ul>
+              <li>Clean, modern presentation</li>
+              <li>Responsive layout</li>
+              <li>Strong visual hierarchy</li>
+            </ul>
+            <a class="project-link" href="https://ogechi-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">View live site</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What people appreciate most.</h2>
+        </div>
+        <div class="testimonial-grid reveal">
+          <article class="testimonial-card">
+            <p>“The site feels calm, polished, and unmistakably personal. It made a strong first impression instantly.”</p>
+            <div class="testimonial-author">
+              <strong>Vincent Sheidu.</strong>
+              <span>Founder, Poiema</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p>“Every detail feels intentional. The experience is simple, elegant, and easy to navigate.”</p>
+            <div class="testimonial-author">
+              <strong>Ogechi Nwogu.</strong>
+              <span>Creative Direction Client</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p>“He is the best to ever do it. A complete genius!.He built my NGO website from scratch that helped me touch so many lives, a real hard worker with skill.”</p>
+            <div class="testimonial-author">
+              <strong>Alex Toluhi.</strong>
+              <span>Founder, Lexocorp</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something meaningful.</h2>
+        </div>
+        <div class="contact-box reveal">
+          <p>
+            If you want a site that feels personal, modern, and easy to maintain,
+            I’d love to hear from you.
+          </p>
+          <button class="button primary" id="open-contact-form" type="button">
+            Say Hello
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay" id="contact-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button class="modal-close" id="close-contact-form" type="button" aria-label="Close contact form">
+          ×
+        </button>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-modal-title">Say hello</h2>
+        <p class="modal-copy">Share a few details and I’ll get back to you soon.</p>
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me about your idea" required></textarea>
+          </label>
+          <button class="button primary full-width" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Peter Olorunjuwonlo Toluhi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
