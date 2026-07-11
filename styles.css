@@ -525,11 +525,33 @@ footer {
 @media (max-width: 768px) {
   .nav-shell {
     padding: 0.7rem 0.8rem;
+    background: rgba(15, 23, 42, 0.95);
+  }
+
+  .menu-toggle {
+    background: rgba(15, 23, 42, 0.96);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.25rem;
+    right: 1rem;
+    left: 1rem;
+    min-width: auto;
+    width: auto;
+    padding: 1rem;
+    border-radius: 22px;
+    background: rgba(15, 23, 42, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    z-index: 20;
   }
 
   .nav-links a {
     width: 100%;
     text-align: left;
+    padding: 0.9rem 1rem;
   }
 
   .about-grid,
@@ -537,4 +559,22 @@ footer {
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* When the mobile nav is open, dim and blur the page behind it for clear separation */
+.nav-shell {
+  z-index: 70; /* keep navigation above the overlay */
+}
+
+.nav-links {
+  z-index: 80; /* ensure the dropdown sits above the dim overlay */
+}
+
+.nav-open .hero::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 60;
 }
